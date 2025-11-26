@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Person
+{
+    private string firstName;
+    private string lastName;
+    private int age;
+    private int birthYear;
+    private string nationality;
+
+    public Person(string firstName, string lastName, int age, int birthYear, string nationality)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.birthYear = birthYear;
+        this.nationality = nationality;
+    }
+
+    public void SetFirstName(string firstName)
+    {
+        this.firstName = firstName;
+    }
+
+    public string GetFirstName()
+    {
+        return firstName;
+    }
+
+    public void SetLastName(string lastName)
+    {
+        this.lastName = lastName;
+    }
+
+    public string GetLastName()
+    {
+        return lastName;
+    }
+
+    public void SetAge(int age)
+    {
+        this.age = age;
+    }
+
+    public int GetAge()
+    {
+        return age;
+    }
+
+    public void SetBirthYear(int birthYear)
+    {
+        this.birthYear = birthYear;
+    }
+
+    public int GetBirthYear()
+    {
+        return birthYear;
+    }
+
+    public void SetNationality(string nationality)
+    {
+        this.nationality = nationality;
+    }
+
+    public string GetNationality()
+    {
+        return nationality;
+    }
+
+    public string GetDetails()
+    {
+        return $"Name: {firstName} {lastName}, Age: {age}, Birth Year: {birthYear}, Nationality: {nationality}";
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Person person = new Person("Alex", "Carter", 21, 2004, "Canadian");
+        Console.WriteLine(person.GetDetails());
+
+        person.SetFirstName("Tim");
+        person.SetLastName("Rivera");
+        person.SetAge(30);
+        person.SetBirthYear(1995);
+        person.SetNationality("American");
+
+        Console.WriteLine(person.GetDetails());
+    }
+}
